@@ -1,0 +1,19 @@
+@use '../variables.scss' as v;
+.page-title {
+  background: v.$clr-primary-4;
+  width: 100%;
+  min-height: calc(20vh);
+  display: flex;
+  align-items: center;
+  .page-title-container {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+  a {
+    color: v.$clr-primary-1;
+  }
+  .title-product {
+    color: v.$clr-primary-5;
+  }
+}

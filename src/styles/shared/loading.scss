@@ -1,0 +1,16 @@
+@use '../variables.scss' as v;
+.loading {
+  height: 6rem;
+  width: 6rem;
+  border: 3px solid v.$clr-primary-5;
+  border-radius: 50%;
+  border-top-color: v.$clr-grey-8;
+  animation: spinner 0.6s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}

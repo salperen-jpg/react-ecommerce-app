@@ -1,0 +1,15 @@
+.stars-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  .star-part {
+    display: flex;
+    gap: 0.1rem;
+    span {
+      color: rgb(255, 166, 0);
+    }
+  }
+  p {
+    font-size: 0.875rem;
+  }
+}

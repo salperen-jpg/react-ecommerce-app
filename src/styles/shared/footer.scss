@@ -1,0 +1,18 @@
+@use '../variables.scss' as v;
+footer {
+  height: 5rem;
+  background: v.$clr-primary-8;
+  color: v.$clr-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .logo {
+    h3 {
+      letter-spacing: var(--spacing);
+    }
+
+    .copyright {
+      font-size: 1rem;
+    }
+  }
+}

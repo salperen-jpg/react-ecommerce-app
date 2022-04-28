@@ -1,0 +1,25 @@
+.add-to-cart {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  .amount-sec {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    .amount-btn {
+      background: transparent;
+      box-shadow: none;
+      font-size: 1rem;
+    }
+    span {
+      font-size: 1.5rem;
+    }
+  }
+  .add-btn {
+    padding: 0.5rem 0.775rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}

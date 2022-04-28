@@ -1,0 +1,70 @@
+@use '../variables.scss' as v;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: grid;
+  place-items: center;
+
+  transform: scale(0);
+  z-index: -1;
+  transition: v.$transition;
+
+  visibility: hidden;
+  .sidebar-wrapper {
+    width: 70vw;
+    height: 70vh;
+    background: v.$clr-white;
+    padding: 3rem 0;
+    position: relative;
+    border-radius: v.$radius;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+    .close-btn {
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      background: transparent;
+      border: transparent;
+      font-size: 2.5rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .sidebar-links {
+      padding-top: 3rem;
+      li {
+        display: block;
+        padding: 1rem 0;
+        margin-bottom: 0.5rem;
+        text-transform: capitalize;
+        transition: v.$transition;
+        padding-left: 1rem;
+      }
+      .sidebar-link {
+        color: v.$clr-primary-5;
+      }
+      li:hover {
+        border-left: 3px solid black;
+        padding-left: 20px;
+        background: v.$clr-grey-5;
+      }
+    }
+    .sidebar-buttons {
+      text-align: center;
+    }
+  }
+}
+.sidebar-open {
+  visibility: visible;
+  transform: scale(1);
+  z-index: 10;
+}
+
+@media screen and (min-width: 992px) {
+  .sidebar {
+    display: none;
+  }
+}
