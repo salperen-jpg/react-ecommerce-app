@@ -1,0 +1,72 @@
+@use './variables.scss' as v;
+.products {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+@media screen and (min-width: 992px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+    img {
+      height: 15rem;
+    }
+  }
+}
+.product {
+  .product-image-container {
+    position: relative;
+    img {
+      height: 20rem;
+      object-fit: cover;
+    }
+
+    .product-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 2.5rem;
+      height: 2.5rem;
+      background: v.$clr-white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: v.$clr-primary-5;
+      font-size: 1.25rem;
+      opacity: 0;
+      cursor: pointer;
+      border: 4px solid v.$clr-primary-5;
+    }
+  }
+  .product-image-container:hover .product-img {
+    opacity: 0.5;
+    // background: red;
+  }
+  .product-image-container:hover .product-icon {
+    opacity: 1;
+  }
+  .product-footer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .price {
+      color: v.$clr-grey-3;
+    }
+  }
+}
+
+.title {
+  padding-top: 2rem;
+  text-align: center;
+  color: v.$clr-primary-5;
+
+  .underline {
+    width: 7rem;
+    height: 0.3rem;
+    background: v.$clr-grey-1;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+}

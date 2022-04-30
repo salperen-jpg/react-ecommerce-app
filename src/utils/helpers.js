@@ -4,3 +4,7 @@ export const formatPrice = (price) => {
     currency: 'USD',
   }).format(price);
 };
+
+export const getUniqueValues = (products, text) => {
+  return ['all', ...new Set(products.map((product) => product[text]))];
+};

@@ -1,0 +1,46 @@
+@use './variables.scss' as v;
+.filters {
+  .form-control {
+    margin-bottom: 1rem;
+  }
+  form span {
+    display: block;
+    margin-bottom: 0.7rem;
+    color: #f15025;
+    letter-spacing: v.$spacing;
+    font-size: 0.9rem;
+  }
+  input[type='text'] {
+    height: 2rem;
+    border: none;
+    width: 60vw;
+    max-width: 13rem;
+    outline: none;
+    appearance: none;
+    padding: 1rem;
+    border-radius: v.$radius;
+    font-size: 1rem;
+    letter-spacing: v.$spacing;
+    color: v.$clr-grey-1;
+  }
+  .form-input::placeholder {
+    color: inherit;
+  }
+  .filter-price {
+    letter-spacing: v.$spacing;
+  }
+  .filter-btn {
+    box-shadow: none;
+    display: block;
+    padding: 0.25rem 0;
+    text-transform: capitalize;
+    color: v.$clr-grey-4;
+    letter-spacing: 0.2rem;
+    transition: v.$transition;
+  }
+  .active {
+    color: v.$clr-primary-5;
+    font-weight: 700;
+    border-bottom: 1px solid v.$clr-primary-5;
+  }
+}

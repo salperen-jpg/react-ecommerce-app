@@ -169,3 +169,14 @@ img {
 .section {
   padding: 5rem 0;
 }
+
+.abc {
+  display: grid;
+  gap: 4rem;
+}
+.abc h1 {
+  background: red;
+}
+.abc h2 {
+  background: blue;
+}

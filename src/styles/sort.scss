@@ -1,0 +1,25 @@
+@use './variables.scss' as v;
+.sorting {
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  p {
+    font-size: 0.875rem;
+  }
+  hr {
+    color: v.$clr-primary-5;
+  }
+  select {
+    background: transparent;
+    border: none;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    letter-spacing: v.$spacing;
+    color: v.$clr-grey-4;
+  }
+  label {
+    color: #f12505;
+  }
+}

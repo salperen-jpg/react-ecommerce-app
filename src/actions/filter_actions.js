@@ -1,0 +1,6 @@
+export const GET_PRODUCTS = 'GET_PRODUCTS';
+export const UPDATE_SORT = 'UPDATE_SORT';
+export const HANDLE_SORT = 'HANDLE_SORT';
+export const UPDATE_FILTERS = 'UPDATE_FILTERS';
+export const FILTER_PRODUCTS = 'FILTER_PRODUCTS';
+export const CLEAR_FILTERS = 'CLEAR_FILTERS';

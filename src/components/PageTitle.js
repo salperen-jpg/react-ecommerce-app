@@ -7,10 +7,10 @@ const PageTitle = ({ title, product }) => {
     <section className='page-title'>
       <div className='page-title-container section-center'>
         <h3>
-          <Link to='/'> Home </Link> /
+          <Link to='/'> Home </Link>
           {product && (
             <Link className='title-product' to='/products'>
-              Products
+              /Products
             </Link>
           )}
           / {title?.substring(0, 20)}

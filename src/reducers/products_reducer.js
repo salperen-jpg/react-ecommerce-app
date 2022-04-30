@@ -38,6 +38,7 @@ export const reducer = (state, action) => {
       };
     case GET_SINGLE_PRODUCT_ERROR:
       return { ...state, isSingleProductError: true };
+
     default:
       throw new Error(
         `The action you want to utilize ${action.type} could not find.`
