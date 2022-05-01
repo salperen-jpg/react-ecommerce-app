@@ -2,7 +2,6 @@ import React from 'react';
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs';
 import '../styles/stars.scss';
 const Stars = ({ rate, count }) => {
-  console.log(rate, count);
   return (
     <article className='stars-container'>
       <div className='star-part'>

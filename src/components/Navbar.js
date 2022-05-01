@@ -8,6 +8,7 @@ import { useProductsContext } from '../context/products_context';
 
 const Navbar = () => {
   const { openSidebar } = useProductsContext();
+
   return (
     <nav className='nav'>
       <div className='nav-center'>

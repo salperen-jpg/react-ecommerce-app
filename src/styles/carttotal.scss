@@ -1,0 +1,20 @@
+@use './variables.scss' as v;
+
+.cart_total {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.4rem;
+
+  p {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    letter-spacing: v.$spacing;
+    .att {
+      font-weight: 600;
+      color: #f25150;
+    }
+  }
+}

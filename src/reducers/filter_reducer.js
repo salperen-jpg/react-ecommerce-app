@@ -12,7 +12,6 @@ export const reducer = (state, action) => {
     case GET_PRODUCTS:
       let maxPrice = action.payload.map((product) => product.price);
       maxPrice = Math.max(...maxPrice);
-      console.log(maxPrice);
 
       return {
         ...state,

@@ -13,6 +13,8 @@ import AddToCart from './AddToCart';
 import Filters from './Filters';
 import Products from './Products';
 import Sorting from './Sorting';
+import CartItem from './CartItem';
+import CartTotal from './CartTotal';
 
 export {
   Navbar,
@@ -30,4 +32,6 @@ export {
   Filters,
   Products,
   Sorting,
+  CartItem,
+  CartTotal,
 };

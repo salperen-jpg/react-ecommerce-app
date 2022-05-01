@@ -8,7 +8,6 @@ import '../styles/singlepage.scss';
 
 const SingleProductPage = () => {
   const { id } = useParams();
-  console.log(id);
 
   const {
     isSingleProductLoading: loading,
@@ -16,7 +15,6 @@ const SingleProductPage = () => {
     singleProduct,
     fetchSingleProduct,
   } = useProductsContext();
-  console.log(singleProduct);
 
   useEffect(() => {
     fetchSingleProduct(`${all_products}/${id}`);

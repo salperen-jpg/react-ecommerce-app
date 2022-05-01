@@ -131,6 +131,9 @@ img {
   border-color: transparent;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
+.btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
 
 .basket-container {
   position: relative;
@@ -160,6 +163,14 @@ img {
   min-height: calc(100vh - (20vh + 10rem));
 }
 
+/* 
+ */
+.empty-container {
+  min-height: calc(100vh - 10rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* SECTION-CENTER */
 .section-center {
   width: 90vw;
@@ -168,15 +179,4 @@ img {
 }
 .section {
   padding: 5rem 0;
-}
-
-.abc {
-  display: grid;
-  gap: 4rem;
-}
-.abc h1 {
-  background: red;
-}
-.abc h2 {
-  background: blue;
 }

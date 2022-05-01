@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import '../styles/addtocart.scss';
+import { useCartContext } from '../context/card_context';
 
-const AddToCart = () => {
+const AddToCart = ({ product }) => {
   const [amount, setAmount] = useState(1);
+  const { addToCart } = useCartContext();
 
   const increaseAmount = () => {
     setAmount((oldState) => {
@@ -40,7 +42,13 @@ const AddToCart = () => {
           <FaPlus />
         </button>
       </div>
-      <Link to='/checkout' className='btn add-btn'>
+      <Link
+        to='/checkout'
+        className='btn add-btn'
+        onClick={() => {
+          addToCart(amount, product);
+        }}
+      >
         Add to Cart
       </Link>
     </section>
