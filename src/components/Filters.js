@@ -51,6 +51,7 @@ const Filters = () => {
           <input
             type='range'
             name='price'
+            step={0.01}
             min={min_price}
             max={max_price}
             value={price}

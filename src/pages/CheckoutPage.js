@@ -11,6 +11,9 @@ const CheckoutPage = () => {
     return (
       <aside className='empty-container '>
         <h1>Your cart is currently empty</h1>
+        <Link to='/products' className='btn'>
+          Add Items
+        </Link>
       </aside>
     );
   }
@@ -29,7 +32,6 @@ const CheckoutPage = () => {
         <hr className='hr-big' />
         <div className='card-items-container'>
           {cart.map((single, index) => {
-            console.log(single);
             return <CartItem key={index} {...single} />;
           })}
         </div>

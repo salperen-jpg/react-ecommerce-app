@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Home, About, Error, Products, SingleProduct, Checkout } from './pages';
 import { Navbar, Footer, Sidebar } from './components';
+
 function App() {
   return (
     <Router>

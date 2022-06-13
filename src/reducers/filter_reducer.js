@@ -56,7 +56,6 @@ export const reducer = (state, action) => {
         },
       };
     case FILTER_PRODUCTS:
-      console.log('filterin');
       const { all_products } = state;
       const { search, category, price } = state.filters;
       let tempPro = [...all_products];
@@ -70,7 +69,7 @@ export const reducer = (state, action) => {
           (product) => product.category.toLowerCase() === category
         );
       }
-      tempPro = tempPro.filter((product) => product.price <= price);
+      tempPro = tempPro.filter((product) => parseInt(product.price) <= price);
       return { ...state, filtered_products: tempPro };
     case CLEAR_FILTERS:
       return {

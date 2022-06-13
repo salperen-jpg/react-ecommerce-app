@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Navigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Loading, Error, PageTitle, Stars, AddToCart } from '../components';
 import { useProductsContext } from '../context/products_context';
 import { all_products } from '../utils/constants';
@@ -20,7 +20,11 @@ const SingleProductPage = () => {
     fetchSingleProduct(`${all_products}/${id}`);
   }, [id]);
   if (loading) {
-    return <Loading />;
+    return (
+      <aside className='empty-container '>
+        <Loading />
+      </aside>
+    );
   }
   if (error) {
     return <Error />;

@@ -1,8 +1,6 @@
 import React from 'react';
 import her1 from '../assets/hero-1.jpg';
-import her2 from '../assets/hero-2.jpg';
-import her3 from '../assets/hero-3.jpg';
-// import her4 from '../assets/errorImg.svg';
+
 import { Link } from 'react-router-dom';
 import '../styles/homehero.scss';
 
