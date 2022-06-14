@@ -5,8 +5,10 @@ import '../styles/shared/sidebar.scss';
 import { MdClose } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import CartButtons from './CartButtons';
+import { useUserContext } from '../context/user_context';
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useProductsContext();
+  const { myUser } = useUserContext();
   return (
     <aside className={`${isSidebarOpen ? 'sidebar sidebar-open' : 'sidebar'}`}>
       <div className='sidebar-wrapper'>
@@ -24,6 +26,13 @@ const Sidebar = () => {
               </li>
             );
           })}
+          {myUser && (
+            <li>
+              <Link className='sidebar-link' to={'/checkout'}>
+                Checkout
+              </Link>
+            </li>
+          )}
         </ul>
         <div className='sidebar-buttons'>
           <CartButtons />

@@ -35,7 +35,7 @@
     .nav-links {
       display: none;
     }
-    .cart-container {
+    .cart-button-container {
       display: none;
     }
   }
@@ -48,8 +48,8 @@
       .toggle-btn {
         display: none;
       }
-      .cart-container {
-        display: block;
+      .cart-button-container {
+        display: flex;
       }
       .nav-links {
         display: flex;

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate, Navigate } from 'react-router-dom';
 import { Loading, Error, PageTitle, Stars, AddToCart } from '../components';
 import { useProductsContext } from '../context/products_context';
 import { all_products } from '../utils/constants';
@@ -8,7 +8,7 @@ import '../styles/singlepage.scss';
 
 const SingleProductPage = () => {
   const { id } = useParams();
-
+  const navigate = useNavigate();
   const {
     isSingleProductLoading: loading,
     isSingleProductError: error,
@@ -27,7 +27,9 @@ const SingleProductPage = () => {
     );
   }
   if (error) {
-    return <Error />;
+    setTimeout(() => {
+      navigate('./');
+    }, 3000);
   }
 
   const {
